@@ -11,9 +11,8 @@ public class PrimeCheck {
     public static void main(String[] args) {
         int[] array = {3, 8, 11, 18, 23, 29, 31};
 
-        // Используем обычный цикл for вместо for-each
         for (int i = 0; i < array.length; i++) {
-            int number = array[i]; // Получаем элемент массива по индексу
+            int number = array[i];
             if (isPrime(number)) {
                 System.out.println(number + " is a prime number.");
             } else {
@@ -22,12 +21,11 @@ public class PrimeCheck {
         }
     }
 
-    // Метод для проверки, является ли число простым
     public static boolean isPrime(int number) {
         if (number < 2) {
             return false;
         }
-        // Используем i * i вместо Math.sqrt(number)
+
         for (int i = 2; i * i <= number; i++) {
             if (number % i == 0) {
                 return false;
